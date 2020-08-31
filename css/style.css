@@ -1,0 +1,28 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --red-primary: hsl(0, 100%, 74%);
+  --green-primary: hsl(154, 59%, 51%);
+  --blue-accent: hsl(248, 32%, 49%);
+  --darkBlue-neutral: hsl(249, 10%, 26%);
+  --grayishBlue-neutral: hsl(246, 25%, 77%);
+  --fz-body: 16px;
+  --font-f: font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
