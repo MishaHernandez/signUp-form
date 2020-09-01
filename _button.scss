@@ -1,0 +1,39 @@
+%button {
+    width: 100%;
+    background: none;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+@mixin button-background($button-background) {
+    @extend %button;
+    background-color: $button-background;
+
+    &:hover {
+        background-color: lighten($button-background, 10%);
+    }
+}
+
+.button--pay {
+    @include button-background($blue-accent);
+    margin-bottom: 1.5rem;
+    padding: 1.1rem 3rem;
+    box-shadow: 0 8px rgba(0, 0, 0, .15);
+}
+
+.button--submit {
+    @include button-background($green-primary);
+    padding-top: 13px;
+    padding-bottom: 13px;
+    text-transform: uppercase;
+    box-shadow: 0 4px darken($green-primary, 10%);
+}
+
+.button__span {
+    font-family: inherit;
+    font-weight: 600;
+}
