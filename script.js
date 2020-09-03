@@ -19,33 +19,67 @@ form.addEventListener('submit', (e) => {
 })
 
 firstName.addEventListener('change', (e)=> {
-    if (e.target.value.trim().length > 0) validationTable.firstname = true
+    const selectedInput = e.target
+    if (selectedInput.value.trim().length > 0) {
+        validationTable.firstname = true
+        selectedInput.nextElementSibling.classList.remove('show-icon')
+    }
     else {
         validationTable.firstname = false
-        console.log('First name inválido')
+        selectedInput.nextElementSibling.classList.add('show-icon')
     }
 })
 
 lastName.addEventListener('change', (e) => {
-    if (e.target.value.trim().length > 0) validationTable.lastname = true
+    const selectedInput = e.target
+    if (selectedInput.value.trim().length > 0) {
+        validationTable.lastname = true
+        selectedInput.nextElementSibling.classList.remove('show-icon')
+    }
     else {
         validationTable.lastname = false
-        console.log('Last name inválido')
+        selectedInput.nextElementSibling.classList.add('show-icon')
     }
 })
 
 email.addEventListener('change', (e) => {
+    const selectedInput = e.target
     const emailRegex = /^(([^<>()\[\]\\.,:\s@"]+(\.[^<>()\[\]\\.,:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-    if (emailRegex.test(e.target.value.trim())) validationTable.email = true
-    else console.log('email incorrecto')
+    if (emailRegex.test(selectedInput.value.trim())) {
+        validationTable.email = true
+        selectedInput.nextElementSibling.classList.remove('show-icon')
+    }
+    else {
+        validationTable.email = false
+        selectedInput.nextElementSibling.classList.add('show-icon')
+    }
 })
 
 password.addEventListener('change', (e) => {
-    //Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long
-    const passwordRegex = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
-    if (passwordRegex.test(e.target.value)) validationTable.password = true
-    else console.log('password incorrecto')
+    const selectedInput = e.target
+    if (selectedInput.value.trim().length > 0) {
+        validationTable.password = true
+        selectedInput.nextElementSibling.classList.remove('show-icon')
+    } else {
+        validationTable.password = false
+        selectedInput.nextElementSibling.classList.add('show-icon')
+    }
 })
+
+// moderate validation In progress...
+// password.addEventListener('change', (e) => {
+//     const selectedInput = e.target
+//     //Should have 1 lowercase letter, 1 uppercase letter, 1 number, and be at least 8 characters long
+//     const passwordRegex = /(?=(.*[0-9]))((?=.*[A-Za-z0-9])(?=.*[A-Z])(?=.*[a-z]))^.{8,}$/
+//     if (passwordRegex.test(selectedInput.value)) {
+//         validationTable.password = true
+//         selectedInput.nextElementSibling.classList.remove('show-icon')
+//     }
+//     else {
+//         validationTable.password = false
+//         selectedInput.nextElementSibling.classList.add('show-icon')
+//     }
+// })
 
 const validateForm = () => {
     const formValues = Object.values(validationTable)
@@ -54,9 +88,9 @@ const validateForm = () => {
     else {
         const formKeys = Object.keys(validationTable)
         for (let i = 0; i < formKeys.length; i++) {
-            if (formValues[i] === false) document.querySelector(`.msg-${formKeys[i]}`).classList.add('msg-show')
-            else document.querySelector(`.msg-${formKeys[i]}`).classList.remove('msg-show')
+            if (formValues[i] === false) document.querySelector(`.msg-${formKeys[i]}`).classList.add('show-msg')
+            else document.querySelector(`.msg-${formKeys[i]}`).classList.remove('show-msg')
         }
-        console.log('invalid form')
+        console.log('invalid form submission')
     }
 }

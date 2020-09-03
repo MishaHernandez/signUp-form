@@ -6,6 +6,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/68a9e07591.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | Intro component with sign up form</title>
 
 </head>
@@ -24,10 +25,22 @@
       <button class="button button--pay"><span class="button__span">Try it free 7 days</span> then $20/mo. thereafter</button>
     
       <form id="form" class="form" action="">
-        <input id="firstname"class="form__input" type="text" placeholder="First Name"><i class="form__msg msg-firstname">First name cannot be empty</i>
-        <input id="lastname"class="form__input" type="text" placeholder="Last Name"><i class="form__msg msg-lastname">Last name cannot be empty</i>
-        <input id="email"class="form__input" type="email" placeholder="Email Address"><i class="form__msg msg-email">Looks like this is not an email</i>
-        <input id="password"class="form__input" type="password" placeholder="Password"><i class="form__msg msg-password">Password cannot be empty</i>
+        <div class="form__input-container">
+          <input id="firstname" class="form__input" type="text" placeholder="First Name"><i class="form__icon fas fa-exclamation-circle"></i>
+        </div>
+        <i class="form__msg msg-firstname">First name cannot be empty</i>
+        <div class="form__input-container">
+          <input id="lastname" class="form__input" type="text" placeholder="Last Name"><i class="form__icon fas fa-exclamation-circle"></i>
+        </div>
+        <i class="form__msg msg-lastname">Last name cannot be empty</i>
+        <div class="form__input-container">
+          <input id="email"class="form__input" type="email" placeholder="Email Address"><i class="form__icon fas fa-exclamation-circle"></i>
+        </div>
+        <i class="form__msg msg-email">Looks like this is not an email</i>
+        <div class="form__input-container">
+          <input id="password"class="form__input" type="password" placeholder="Password"><i class="form__icon fas fa-exclamation-circle"></i>
+        </div>
+        <i class="form__msg msg-password">Password cannot be empty</i>
         <button id="btnsubmit"class="button button--submit" type="submit">Claim your free trial </button>
         <p class="form__terms">By clicking the button, you are agreeing to our <span class="form__span">Terms and Services</span></p>
       </form>

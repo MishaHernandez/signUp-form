@@ -107,6 +107,10 @@ body {
   background-color: #fff;
   box-shadow: 0 8px rgba(0, 0, 0, 0.15);
 }
+.form__input-container {
+  margin-bottom: 1rem;
+  position: relative;
+}
 .form__input {
   width: 100%;
   border: 1px solid lightgray;
@@ -115,7 +119,6 @@ body {
   font-size: 14px;
   font-family: inherit;
   font-weight: 600;
-  margin-bottom: 1rem;
 }
 .form__input:focus {
   border-color: #000;
@@ -124,6 +127,14 @@ body {
   .form__input {
     padding: 1rem 2rem;
   }
+}
+.form__icon {
+  font-size: 25px;
+  color: #ff7a7a;
+  position: absolute;
+  right: 10px;
+  bottom: 15px;
+  opacity: 0;
 }
 .form__msg {
   display: none;
@@ -143,7 +154,11 @@ body {
   }
 }
 
-.msg-show {
+.show-icon {
+  opacity: 1;
+}
+
+.show-msg {
   display: inline-block;
   width: 100%;
   text-align: right;

@@ -33,6 +33,7 @@ body {
         justify-content: center;
     }
 }
+// INTRO DE FORMULARIO
 .section-one {
     width: 85%;
     margin-bottom: 3rem;
@@ -68,12 +69,17 @@ body {
         padding: 1.1rem;
     }
 }
-
+// FORMULARIO
 .form {
     padding: 1.5rem;
     border-radius: 8px;
     background-color: #fff;
     box-shadow: 0 8px rgba(0, 0, 0, .15);
+
+    &__input-container {
+        margin-bottom: 1rem;
+        position: relative;
+    }
 
     &__input {
         width: 100%;
@@ -83,7 +89,6 @@ body {
         font-size: 14px;
         font-family: inherit;
         font-weight: 600;
-        margin-bottom: 1rem;
 
         &:focus {
             border-color: #000;
@@ -92,6 +97,15 @@ body {
         @media (min-width: 950px) {
             padding: 1rem 2rem;
         }
+    }
+
+    &__icon {
+        font-size: 25px;
+        color: $red-primary;
+        position: absolute;
+        right: 10px;
+        bottom: 15px;
+        opacity: 0;
     }
 
     &__msg {
@@ -113,8 +127,11 @@ body {
         padding: 2.5rem;
     }
 }
-// Show alert message
-.msg-show {
+// SECUNDARY CLASSES
+.show-icon {
+    opacity: 1;
+}
+.show-msg {
     display: inline-block;
     width: 100%;
     text-align: right;
