@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet"> -->
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
@@ -23,18 +23,17 @@
     <div class="section-two">
       <button class="button button--pay"><span class="button__span">Try it free 7 days</span> then $20/mo. thereafter</button>
     
-      <form class="form" action="">
-        <input class="form__input" type="text" placeholder="First Name"></input>
-        <input class="form__input" type="text" placeholder="Last Name"></input>
-        <input class="form__input" type="text" placeholder="Email Address"></input>
-        <input class="form__input" type="text" placeholder="Password"></input>
-        <button class="button button--submit">Claim your free trial </button>
+      <form id="form" class="form" action="">
+        <input id="firstname"class="form__input" type="text" placeholder="First Name"><i class="icon"></i></input>
+        <input id="lastname"class="form__input" type="text" placeholder="Last Name"><i class="icon"></i></input>
+        <input id="email"class="form__input" type="email" placeholder="Email Address"><i class="icon"></i></input>
+        <input id="password"class="form__input" type="password" placeholder="Password"><i class="icon"></i></input>
+        <button id="btnsubmit"class="button button--submit" type="submit">Claim your free trial </button>
         <p class="form__terms">By clicking the button, you are agreeing to our <span class="form__span">Terms and Services</span></p>
       </form>
 
     </div>
 
-    
   </div>
   <footer>
     <p class="attribution">
@@ -42,5 +41,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>

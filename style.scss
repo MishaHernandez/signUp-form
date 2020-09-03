@@ -39,7 +39,7 @@ body {
     text-align: center;
     color: #fff;
 
-    .section-one__title {
+    &__title {
         font-size: 1.7rem;
 
         @media (min-width: 950px) {
@@ -47,7 +47,7 @@ body {
             line-height: 1.1;
         }
     }
-    .section-one__paragraph {
+    &__paragraph {
         @media (min-width: 950px) {
             font-weight: 500;
         }

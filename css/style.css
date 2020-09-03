@@ -69,17 +69,17 @@ body {
   text-align: center;
   color: #fff;
 }
-.section-one .section-one__title {
+.section-one__title {
   font-size: 1.7rem;
 }
 @media (min-width: 950px) {
-  .section-one .section-one__title {
+  .section-one__title {
     font-size: 3rem;
     line-height: 1.1;
   }
 }
 @media (min-width: 950px) {
-  .section-one .section-one__paragraph {
+  .section-one__paragraph {
     font-weight: 500;
   }
 }
